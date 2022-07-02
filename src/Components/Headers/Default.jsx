@@ -1,5 +1,5 @@
 const DefaultHeader = () => {
-  return <h1>Minhas Tarefas</h1>;
+  return <h1>Tasks</h1>;
 };
 
 export default DefaultHeader;
