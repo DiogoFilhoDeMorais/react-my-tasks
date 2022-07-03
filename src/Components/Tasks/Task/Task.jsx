@@ -1,7 +1,14 @@
 import "./Task.css";
+import { useNavigate } from "react-router-dom";
 import { CgClose, CgInfo } from "react-icons/cg";
 
-const Task = ({ task, handleClickTask, handleTaskDelete }) => {
+const Task = ({ task, handleClickTaskCheck, handleTaskDelete }) => {
+  const navigate = useNavigate();
+
+  const handleOpenTaskDetail = () => {
+    navigate(`/task/${task.id}`);
+  };
+
   return (
     <div
       style={task.completed ? { borderLeft: "6px solid chartreuse" } : {}}
@@ -10,13 +17,17 @@ const Task = ({ task, handleClickTask, handleTaskDelete }) => {
       <div
         className="task-title"
         onClick={() => {
-          handleClickTask(task.id);
+          handleClickTaskCheck(task.id);
         }}
       >
         {task.title}
       </div>
       <div className="task-buttons">
-        <button onClick={() => {}}>
+        <button
+          onClick={() => {
+            handleOpenTaskDetail();
+          }}
+        >
           <CgInfo />
         </button>
         <button

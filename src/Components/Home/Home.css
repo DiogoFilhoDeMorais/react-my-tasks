@@ -1,9 +1,0 @@
-.container {
-    width: calc(100% - 44px);
-    margin: 10px 10px auto;
-    overflow: auto;
-    min-height: calc(100vh - 44px);
-    border: 2px solid chartreuse;
-    padding: 10px;
-    border-radius: 10px;
-}

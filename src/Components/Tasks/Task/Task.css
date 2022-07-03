@@ -15,9 +15,15 @@
     flex: 2;
 }
 
+.task-buttons {
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
 button {
     background-color: #444;
     border: none;
     font-size: 18px;
     color: chartreuse;
+    font-size: 25px;
 }
