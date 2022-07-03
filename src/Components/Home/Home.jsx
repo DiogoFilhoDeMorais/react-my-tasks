@@ -17,7 +17,7 @@ const Home = () => {
       },
     ];
 
-    setTasks(newTask);
+    if (taskTitle.length > 2) setTasks(newTask);
   };
 
   const handleTaskDelete = (taskId) => {
@@ -35,6 +35,7 @@ const Home = () => {
 
     setTasks(newTasks);
   };
+
   return (
     <div>
       <AddTasks handleTaskAdd={handleTaskAdd} />

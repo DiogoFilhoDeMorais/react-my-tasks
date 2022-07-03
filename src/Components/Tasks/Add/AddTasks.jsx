@@ -10,8 +10,10 @@ const AddTasks = ({ handleTaskAdd }) => {
   };
 
   const handleClickButton = () => {
-    handleTaskAdd(inputData);
-    setInputData("");
+    if (inputData.length > 2) {
+      handleTaskAdd(inputData);
+      setInputData("");
+    }
   };
 
   return (
@@ -21,6 +23,7 @@ const AddTasks = ({ handleTaskAdd }) => {
         value={inputData}
         className="add-task-input"
         placeholder="Type new task ..."
+        minLength="3"
         type="text"
       />
 
